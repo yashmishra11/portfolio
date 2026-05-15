@@ -2,9 +2,7 @@
 
 A modern, responsive portfolio website showcasing my projects, skills, and professional experience as a Full Stack Developer.
 
-## 🌐 Live Demo
-
-Visit the live site: [portfolio-vert-eight-34.vercel.app](https://portfolio-vert-eight-34.vercel.app/)
+## 🌐 Live Demo, Visit the live site: [portfolio-vert-eight-34.vercel.app](https://portfolio-vert-eight-34.vercel.app/)
 
 ## ✨ Features
 
@@ -74,30 +72,6 @@ portfolio/
 ├── index.html          # Main HTML file
 ├── profile.png         # Profile image
 └── README.md          # Project documentation
-```
-
-## 🎨 Customization
-
-### Updating Personal Information
-
-1. **Profile Image**: Replace `profile.png` with your own image
-2. **Contact Details**: Update the contact section in `index.html`
-3. **Projects**: Modify the projects section to showcase your work
-4. **Skills**: Add or remove skills in the skills grid
-5. **Colors**: Customize CSS variables in the `:root` selector for theme changes
-
-### Color Scheme
-
-The portfolio uses a custom color palette defined in CSS variables:
-
-```css
---bg-primary: #0a0e27;
---bg-secondary: #111633;
---accent-cyan: #00d9ff;
---accent-purple: #a855f7;
---accent-pink: #ec4899;
---text-primary: #e2e8f0;
---text-secondary: #94a3b8;
 ```
 
 ## 📱 Responsive Design
