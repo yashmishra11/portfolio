@@ -69,9 +69,10 @@ Or simply drag and drop the `index.html` file into your browser.
 
 ```
 portfolio/
+├── LICENSE             # MIT License
 ├── index.html          # Main HTML file
-├── profile.png         # Profile image
-└── README.md          # Project documentation
+├── profile.jpg         # Profile image
+└── README.md           # Project documentation
 ```
 
 ## 📱 Responsive Design
@@ -85,9 +86,11 @@ The portfolio is fully responsive with breakpoints optimized for:
 ## 🎯 Key Projects Featured
 
 1. **WebGenesis AI SaaS Platform** - AI-powered platform for intelligent web applications
-2. **Anime Hub** - Comprehensive anime information platform using Jikan API
-3. **Pokédex** - Interactive Pokémon catalog built with React
-4. **Task Manager** - Functional task organization and time management tool
+2. **CMS-SECL Complaint Monitoring System** - Enterprise complaint recording, workflow tracking, and auditing system developed for South Eastern Coalfields Limited (SECL)
+3. **Days Since Birthdate (ML Web Application)** - Full-stack web application with machine learning model inference and lifetime milestone calculations
+4. **Anime Hub** - Comprehensive anime information platform using Jikan API
+5. **Pokédex** - Interactive Pokémon catalog built with React
+6. **Task Manager** - Functional task organization and time management tool with Firebase
 
 ## 📜 Certificates
 

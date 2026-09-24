@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yash Mishra - Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Yash Mishra - Full Stack Developer specializing in React, Next.js, Node.js, and modern web applications.">
+    <meta name="keywords" content="Yash Mishra, Full Stack Developer, React, Next.js, Node.js, Web Development, Portfolio">
+    <meta name="author" content="Yash Mishra">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300d9ff'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%23111633'/%3E%3Ctext x='50%25' y='65%25' font-family='sans-serif' font-weight='900' font-size='44' fill='url(%23g)' text-anchor='middle'%3EYM%3C/text%3E%3C/svg%3E">
+    <meta property="og:title" content="Yash Mishra - Full Stack Developer">
+    <meta property="og:description" content="Computer Science student & Full Stack Developer building scalable, user-focused web applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-vert-eight-34.vercel.app/">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yash Mishra - Full Stack Developer">
+    <meta name="twitter:description" content="Computer Science student & Full Stack Developer building scalable, user-focused web applications.">
+    <meta name="twitter:image" content="profile.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -461,6 +474,15 @@
             z-index: 1;
         }
 
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -474,7 +496,7 @@
 
         .project-link:hover {
             color: var(--accent-purple);
-            transform: translateX(5px);
+            transform: translateX(3px);
         }
 
         .project-link::after {
@@ -484,7 +506,233 @@
         }
 
         .project-link:hover::after {
-            margin-left: 1rem;
+            margin-left: 0.75rem;
+        }
+
+        .project-link-secondary {
+            color: var(--text-secondary);
+        }
+
+        .project-link-secondary:hover {
+            color: var(--text-primary);
+        }
+
+        /* Project Tech Badges */
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-badge {
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            color: var(--accent-cyan);
+            letter-spacing: 0.02em;
+            transition: all 0.25s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(0, 217, 255, 0.16);
+            border-color: var(--accent-cyan);
+            transform: translateY(-1px);
+        }
+
+        /* Hero CTA Buttons */
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: 12px;
+            font-family: 'Questrial', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: #0a0e27;
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.25);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 217, 255, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: rgba(17, 22, 51, 0.6);
+            border: 1px solid rgba(0, 217, 255, 0.25);
+            color: var(--text-primary);
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 217, 255, 0.1);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+
+        /* Ambient Cursor Glow */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            margin-left: -300px;
+            margin-top: -300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, rgba(168, 85, 247, 0.04) 40%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+            will-change: transform;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(17, 22, 51, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: var(--accent-cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.3);
+        }
+
+        /* Footer */
+        .portfolio-footer {
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            padding: 3rem 0 2rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            text-align: center;
+        }
+
+        .footer-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            color: #34d399;
+            padding: 0.45rem 1.1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-pulse {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981;
+            position: relative;
+        }
+
+        .status-pulse::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            border: 2px solid #10b981;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.88rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .footer-links span {
+            color: rgba(255, 255, 255, 0.2);
         }
 
         /* Certificates */
@@ -554,7 +802,7 @@
         /* Contact */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -563,45 +811,106 @@
             background: var(--card-bg);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 217, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 14px;
+            padding: 1.4rem 1.5rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.1rem;
+            min-width: 0;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05), rgba(168, 85, 247, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .contact-item:hover {
             transform: translateY(-3px);
-            border-color: var(--accent-cyan);
-            background: rgba(0, 217, 255, 0.05);
+            border-color: rgba(0, 217, 255, 0.35);
+            box-shadow: 0 12px 30px rgba(0, 217, 255, 0.12);
+        }
+
+        .contact-item:hover::before {
+            opacity: 1;
         }
 
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            border-radius: 10px;
+            min-width: 50px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.15), rgba(168, 85, 247, 0.15));
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-icon svg {
+            width: 22px;
+            height: 22px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: #0a0e27;
+            border-color: transparent;
+            transform: scale(1.06);
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.35);
+        }
+
+        .contact-item:hover .contact-icon svg {
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            min-width: 0;
+            flex: 1;
+            position: relative;
+            z-index: 1;
         }
 
         .contact-info h3 {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
             color: var(--text-secondary);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.35rem;
+            font-weight: 600;
         }
 
         .contact-info p {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--text-primary);
+            margin: 0;
+            line-height: 1.4;
+            word-break: break-all;
+            overflow-wrap: anywhere;
         }
 
         .contact-info a {
             color: var(--accent-cyan);
             text-decoration: none;
+            display: inline-block;
+            max-width: 100%;
+            word-break: break-all;
+            overflow-wrap: anywhere;
             transition: color 0.3s ease;
         }
 
@@ -647,7 +956,7 @@
         @media (max-width: 768px) {
             .sidebar {
                 transform: translateX(-100%);
-                z-index: 1000;
+                z-index: 1001;
             }
 
             .sidebar.active {
@@ -656,7 +965,7 @@
 
             .main-content {
                 margin-left: 0;
-                padding: 2rem 1.5rem;
+                padding: 4.5rem 1.5rem 2rem;
             }
 
             .hero {
@@ -687,26 +996,76 @@
             }
         }
 
-        /* Mobile Menu Toggle */
+        /* Mobile Menu Toggle & Overlay */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 14, 39, 0.75);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
         .menu-toggle {
             display: none;
             position: fixed;
-            top: 1.5rem;
-            left: 1.5rem;
-            z-index: 1001;
-            background: var(--accent-cyan);
-            border: none;
-            color: var(--bg-primary);
-            width: 50px;
-            height: 50px;
+            top: 1.25rem;
+            right: 1.25rem;
+            z-index: 1002;
+            background: rgba(17, 22, 51, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            color: var(--accent-cyan);
+            width: 46px;
+            height: 46px;
             border-radius: 12px;
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: var(--accent-cyan);
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
             .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .sidebar-overlay {
                 display: block;
+            }
+
+            .back-to-top {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero-cta-group {
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
             }
         }
 
@@ -717,10 +1076,18 @@
     </style>
 </head>
 <body>
+    <div class="cursor-glow" id="cursor-glow"></div>
     <div class="bg-animation"></div>
     <div class="noise"></div>
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeMenu()"></div>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" onclick="scrollToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
 
     <div class="container">
         <!-- Sidebar -->
@@ -747,12 +1114,30 @@
                     <h1 class="hero-title">Yash Mishra</h1>
                     <p class="hero-subtitle">Full Stack Developer</p>
                     <p class="hero-description">
-                        I'm a Computer Science student with a strong interest in building practical, user-focused web applications. I primarily work with React and modern JavaScript to create clean, responsive interfaces, and I have hands-on experience with backend fundamentals like Node.js, MySQL, and REST APIs. I've deployed multiple projects on Vercel with proper documentation and version control, and I've also worked on machine-learning–based projects using CNN architectures such as VGG16, which strengthened my problem-solving approach. I enjoy learning by building, writing maintainable code, and continuously improving my full-stack development skills.
+                        I'm a Computer Science student with a strong interest in building practical, user-focused web applications. I primarily work with React and modern JavaScript to create clean, responsive interfaces, and I have hands-on experience with backend fundamentals like Node.js, MySQL, and REST APIs. I've deployed multiple projects on Vercel with proper documentation and version control, and I've also worked on machine-learning–based projects using CNN architectures such as VGG16, which strengthened my problem-solving approach. Additionally, I have hands-on experience collaborating with international teams in managing Microsoft 365 environments, SharePoint administration, and enterprise productivity tools. I enjoy learning by building, writing maintainable code, and continuously improving my full-stack development skills.
                     </p>
+                    <div class="hero-cta-group">
+                        <a href="mailto:mr.yashofficial1102@gmail.com?subject=Resume%20Request%20-%20Yash%20Mishra" class="btn btn-primary" id="btn-resume">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            <span>Get Resume / CV</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Let's Connect</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-image-container">
                     <div class="hero-image-glow"></div>
-                    <img src="profile.jpg" alt="Yash Mishra" class="hero-image">
+                    <img src="profile.jpg" alt="Yash Mishra" width="300" height="300" class="hero-image">
                 </div>
             </section>
 
@@ -800,6 +1185,7 @@
                     <div class="skill-tag">MySQL</div>
                     <div class="skill-tag">HTML & CSS</div>
                     <div class="skill-tag">Machine Learning</div>
+                    <div class="skill-tag">MS 365 & SharePoint</div>
                 </div>
             </section>
 
@@ -814,9 +1200,63 @@
                         streamline the creation, deployment, and management of intelligent web applications. Built on modern 
                         cloud architecture, WebGenesis provides scalable AI tools and APIs for automation.
                     </p>
-                    <a href="https://web-genesis-ai-saa-s-application.vercel.app" target="_blank" class="project-link">
-                        View Project
-                    </a>
+                    <div class="project-tech">
+                        <span class="tech-badge">Next.js</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">tRPC</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">AI Integration</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://web-genesis-ai-saa-s-application.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">CMS-SECL - Complaint Monitoring System</h3>
+                    <p class="project-description">
+                        An enterprise complaint monitoring system developed for South Eastern Coalfields Limited (SECL) 
+                        to digitally record, track, manage, and resolve departmental complaints with role-based access workflows, 
+                        dynamic status auditing, and secure database management.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">HTML5 & CSS3</span>
+                        <span class="tech-badge">SECL Workflow</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yashmishra11/CMS-secl" target="_blank" rel="noopener noreferrer" class="project-link">
+                            GitHub Repo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Days Since Birthdate - ML Web Application</h3>
+                    <p class="project-description">
+                        A full-stack educational web application demonstrating end-to-end model deployment with integrated 
+                        machine learning inference, calculating timeline milestones and fetching real-time model predictions 
+                        via an asynchronous cloud backend.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">Vercel</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://day-since-birthdate.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project
+                        </a>
+                        <a href="https://github.com/yashmishra11/day_since_birthdate" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            GitHub Repo
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -826,9 +1266,20 @@
                         series, movies, and characters. Leverages the Jikan API to fetch real-time data and offers an 
                         intuitive interface for discovering and exploring anime content.
                     </p>
-                    <a href="https://anime-api-project-ckdp.vercel.app" target="_blank" class="project-link">
-                        View Project
-                    </a>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Jikan REST API</span>
+                        <span class="tech-badge">Responsive CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://anime-api-project-ckdp.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project
+                        </a>
+                        <a href="https://github.com/yashmishra11/anime-api-project" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            GitHub Repo
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -838,9 +1289,20 @@
                         Built with React, this digital Pokédex offers an engaging and interactive way to explore the 
                         Pokémon universe with detailed stats and information.
                     </p>
-                    <a href="https://pokedex-using-react-xi.vercel.app" target="_blank" class="project-link">
-                        View Project
-                    </a>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">PokéAPI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pokedex-using-react-xi.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project
+                        </a>
+                        <a href="https://github.com/yashmishra11/pokedex-using-react" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            GitHub Repo
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
@@ -850,9 +1312,20 @@
                         time efficiently. Features intuitive task creation, completion tracking, and a clean user interface 
                         for productivity enhancement.
                     </p>
-                    <a href="https://todo-list-using-react-teal.vercel.app" target="_blank" class="project-link">
-                        View Project
-                    </a>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Firebase / Firestore</span>
+                        <span class="tech-badge">Authentication</span>
+                        <span class="tech-badge">Vite</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://todo-list-using-react-firebase.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">
+                            View Project
+                        </a>
+                        <a href="https://github.com/yashmishra11/todoList-using-react-and-firebase" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                            GitHub Repo
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -899,7 +1372,12 @@
                 
                 <div class="contact-grid">
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </div>
                         <div class="contact-info">
                             <h3>Email</h3>
                             <p><a href="mailto:mr.yashofficial1102@gmail.com">mr.yashofficial1102@gmail.com</a></p>
@@ -907,23 +1385,36 @@
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">💼</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78Z"/>
+                            </svg>
+                        </div>
                         <div class="contact-info">
                             <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/yash-mishra-7b072224a/" target="_blank">yash-mishra-7b072224a</a></p>
+                            <p><a href="https://www.linkedin.com/in/yash-mishra-7b072224a/" target="_blank" rel="noopener noreferrer">yash-mishra-7b072224a</a></p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">🐙</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
+                            </svg>
+                        </div>
                         <div class="contact-info">
                             <h3>GitHub</h3>
-                            <p><a href="https://github.com/yashmishra11" target="_blank">yashmishra11</a></p>
+                            <p><a href="https://github.com/yashmishra11" target="_blank" rel="noopener noreferrer">yashmishra11</a></p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
                         <div class="contact-info">
                             <h3>Location</h3>
                             <p>Bilaspur, Chhattisgarh, IN</p>
@@ -931,6 +1422,24 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Footer -->
+            <footer class="portfolio-footer">
+                <div class="footer-content">
+                    <div class="footer-status">
+                        <span class="status-pulse"></span>
+                        <span class="status-text">Available for Full-Stack Opportunities</span>
+                    </div>
+                    <p class="footer-copy">© 2026 Yash Mishra. Built with modern web standards.</p>
+                    <div class="footer-links">
+                        <a href="https://github.com/yashmishra11" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <span>•</span>
+                        <a href="https://www.linkedin.com/in/yash-mishra-7b072224a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <span>•</span>
+                        <a href="mailto:mr.yashofficial1102@gmail.com">Email</a>
+                    </div>
+                </div>
+            </footer>
         </main>
     </div>
 
@@ -938,23 +1447,65 @@
         // Mobile Menu Toggle
         function toggleMenu() {
             const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
+            const menuToggle = document.getElementById('menu-toggle');
+            const overlay = document.getElementById('sidebar-overlay');
+            const isOpen = sidebar.classList.toggle('active');
+            
+            if (overlay) {
+                overlay.classList.toggle('active', isOpen);
+            }
+            if (menuToggle) {
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuToggle.textContent = isOpen ? '✕' : '☰';
+            }
+        }
+
+        function closeMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const menuToggle = document.getElementById('menu-toggle');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            sidebar.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.textContent = '☰';
+            }
         }
 
         // Active Navigation
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        window.addEventListener('scroll', () => {
+        function updateActiveNav() {
+            const scrollPos = window.scrollY || window.pageYOffset || 0;
+            const windowHeight = window.innerHeight;
+            const documentHeight = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.offsetHeight
+            );
             let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
+
+            // If user scrolled near the bottom of the page, activate the last section (#contact)
+            if (scrollPos + windowHeight >= documentHeight - 150) {
+                const lastSection = sections[sections.length - 1];
+                if (lastSection) {
+                    current = lastSection.getAttribute('id');
                 }
-            });
+            } else {
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollPos >= sectionTop - 250) {
+                        current = section.getAttribute('id');
+                    }
+                });
+            }
+
+            if (!current && sections.length > 0) {
+                current = sections[0].getAttribute('id');
+            }
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -962,7 +1513,57 @@
                     link.classList.add('active');
                 }
             });
-        });
+
+            // Back to Top button visibility
+            const backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                if (scrollPos > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('DOMContentLoaded', updateActiveNav);
+
+        // Back to top smooth scroll
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Ambient Cursor Glow (Desktop / Mouse pointers only)
+        const cursorGlow = document.getElementById('cursor-glow');
+        if (window.matchMedia('(pointer: fine)').matches && cursorGlow) {
+            let mouseX = 0, mouseY = 0, currentX = 0, currentY = 0;
+            let isMoving = false;
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                if (!isMoving) {
+                    cursorGlow.style.opacity = '1';
+                    isMoving = true;
+                    requestAnimationFrame(renderGlow);
+                }
+            });
+
+            function renderGlow() {
+                currentX += (mouseX - currentX) * 0.12;
+                currentY += (mouseY - currentY) * 0.12;
+                cursorGlow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                if (Math.abs(mouseX - currentX) > 0.1 || Math.abs(mouseY - currentY) > 0.1) {
+                    requestAnimationFrame(renderGlow);
+                } else {
+                    isMoving = false;
+                }
+            }
+
+            document.addEventListener('mouseleave', () => {
+                cursorGlow.style.opacity = '0';
+            });
+        }
 
         // Smooth scroll for navigation links
         navLinks.forEach(link => {
@@ -972,23 +1573,25 @@
                 const targetSection = document.querySelector(targetId);
                 
                 if (window.innerWidth <= 768) {
-                    document.getElementById('sidebar').classList.remove('active');
+                    closeMenu();
                 }
                 
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
 
         // Close sidebar when clicking outside on mobile
         document.addEventListener('click', (e) => {
             const sidebar = document.getElementById('sidebar');
-            const menuToggle = document.querySelector('.menu-toggle');
+            const menuToggle = document.getElementById('menu-toggle');
             
             if (window.innerWidth <= 768 && 
                 !sidebar.contains(e.target) && 
                 !menuToggle.contains(e.target) &&
                 sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
+                closeMenu();
             }
         });
     </script>
